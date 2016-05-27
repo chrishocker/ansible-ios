@@ -1,0 +1,7 @@
+---
+- name: ensure common configuration exists
+  ios_template:
+    src: common.j2
+    provider: "{{ provider }}"
+  notify:
+    - write config

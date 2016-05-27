@@ -1,0 +1,8 @@
+logging buffered 128000
+no logging monitor
+
+# I'm not sure why when I leave this uncommented, ansible will flag it as a change every time even if the command if already on the device
+# logging host {{ logserver }}
+
+# default values in ios that you add again will cause ansible to appear as though a change was made since when it checks the exsiting config, the command will not be there
+# logging console

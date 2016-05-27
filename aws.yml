@@ -1,0 +1,24 @@
+---
+- name: configure aws routers 
+  connection: local
+  hosts: aws
+  gather_facts: false
+
+  pre_tasks:
+    - name: backup config
+      ios_template:
+        backup: true
+        src: backupconfig.j2
+        provider: "{{ provider }}"
+      register: backupconfig
+
+    - debug: var=backupconfig
+
+
+  roles:
+    - role: common
+      tags: common
+    - role: logging
+      tags: logging
+    - role: ha 
+      tags: ha

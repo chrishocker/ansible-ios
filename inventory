@@ -1,0 +1,9 @@
+[virl]
+csr1k device_ip=172.16.1.56
+
+[tenant1]
+tenant1-csr-a device_ip=52.9.162.5
+tenant1-csr-b device_ip=54.153.51.122
+
+[aws:children]
+tenant1

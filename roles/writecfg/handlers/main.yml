@@ -1,0 +1,4 @@
+- name: write config
+  ios_command:
+    commands: write
+    provider: "{{ provider }}"
