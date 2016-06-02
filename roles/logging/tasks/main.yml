@@ -1,7 +1,0 @@
----
-- name: ensure logging configuration exists
-  ios_template:
-    src: logging.j2
-    provider: "{{ provider }}"
-  notify:
-    - write config

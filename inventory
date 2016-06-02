@@ -7,3 +7,6 @@ tenant1-csr-b device_ip=54.153.51.122
 
 [aws:children]
 tenant1
+
+[tenant1-dns]
+ec2-52-9-162-5.us-west-1.compute.amazonaws.com
